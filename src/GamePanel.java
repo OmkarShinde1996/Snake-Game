@@ -7,7 +7,7 @@ public class GamePanel extends JPanel implements ActionListener {
 
     static final int SCREEN_WIDTH = 600;//Width of game window
     static final int SCREEN_HEIGHT = 600;//Height og game window
-    static final int UNIT_SIZE = 25; //How big we want each grid size in game panel
+    static final int UNIT_SIZE = 20; //How big we want each grid size in game panel
     static final int GAME_UNITS = (SCREEN_WIDTH * SCREEN_HEIGHT) / UNIT_SIZE;
     static final int DELAY = 75;
     final int x[] = new int[GAME_UNITS];
@@ -24,7 +24,7 @@ public class GamePanel extends JPanel implements ActionListener {
     GamePanel(){
         random = new Random();
         this.setPreferredSize(new Dimension(SCREEN_WIDTH,SCREEN_HEIGHT)); // Setting up the game window dimension
-        this.setBackground(Color.BLACK); // Setting up the Game Window background color
+        this.setBackground(Color.decode("#1A212B")); // Setting up the Game Window background color
         this.setFocusable(true);
         this.addKeyListener(new MyKeyAdapter());
         startGame(); // Starting the game
